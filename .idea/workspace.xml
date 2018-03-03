@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d4694bba-5cb7-454b-aae5-be8bb1d5183e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/bin/python" afterPath="$PROJECT_DIR$/dep/bin/python" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/bin/python3.5" afterPath="$PROJECT_DIR$/dep/bin/python3.5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/include/python3.5m" afterPath="$PROJECT_DIR$/dep/include/python3.5m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/collections" afterPath="$PROJECT_DIR$/dep/lib/python3.5/collections" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/config-3.5m-x86_64-linux-gnu" afterPath="$PROJECT_DIR$/dep/lib/python3.5/config-3.5m-x86_64-linux-gnu" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/encodings" afterPath="$PROJECT_DIR$/dep/lib/python3.5/encodings" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/importlib" afterPath="$PROJECT_DIR$/dep/lib/python3.5/importlib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/lib-dynload" afterPath="$PROJECT_DIR$/dep/lib/python3.5/lib-dynload" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/plat-x86_64-linux-gnu" afterPath="$PROJECT_DIR$/dep/lib/python3.5/plat-x86_64-linux-gnu" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/__future__.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/__future__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/_bootlocale.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/_bootlocale.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/_collections_abc.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/_collections_abc.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/_dummy_thread.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/_dummy_thread.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/_weakrefset.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/_weakrefset.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/abc.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/abc.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/base64.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/base64.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/bisect.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/bisect.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/codecs.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/codecs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/copy.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/copy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/copyreg.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/copyreg.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/fnmatch.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/fnmatch.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/functools.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/functools.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/genericpath.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/genericpath.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/hashlib.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/hashlib.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/heapq.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/heapq.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/hmac.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/hmac.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/imp.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/imp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/io.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/io.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/keyword.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/keyword.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/linecache.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/linecache.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/locale.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/locale.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/ntpath.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/ntpath.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/operator.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/operator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/os.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/os.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/posixpath.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/posixpath.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/random.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/random.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/re.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/re.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/reprlib.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/reprlib.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/rlcompleter.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/rlcompleter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/shutil.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/shutil.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/sre_compile.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/sre_compile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/sre_constants.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/sre_constants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/sre_parse.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/sre_parse.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/stat.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/stat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/struct.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/struct.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/tarfile.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/tarfile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/tempfile.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/tempfile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/token.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/token.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/tokenize.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/tokenize.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/types.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/types.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/warnings.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/warnings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dep/lib/python3.5/weakref.py" afterPath="$PROJECT_DIR$/dep/lib/python3.5/weakref.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hawaiiansoil/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1533">
+              <caret line="73" column="48" lean-forward="false" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="952" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hawaiian-soil" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hawaiian-soil" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hawaiian-soil" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hawaiian-soil" type="462c0819:PsiDirectoryNode" />
+              <item name="farms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hawaiian-soil" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hawaiian-soil" type="462c0819:PsiDirectoryNode" />
+              <item name="hawaiiansoil" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django server.hawaiian-soil">
+    <configuration name="hawaiian-soil" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="hawaiian-soil" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4694bba-5cb7-454b-aae5-be8bb1d5183e" name="Default" comment="" />
+      <created>1519451376270</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1519451376270</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1734375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hawaiiansoil/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1533">
+          <caret line="73" column="48" lean-forward="false" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
