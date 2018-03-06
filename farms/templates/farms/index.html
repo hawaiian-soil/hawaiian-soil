@@ -1,0 +1,56 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{##}
+{#</body>#}
+{#</html>#}
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+<div class="container">
+    <form 
+    <div class="row">
+        <div class="col-sm">
+
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary">Primary</button>
+    {% bootstrap_button content='Submit' button_type='submit' %}
+</div>
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+{#<button>#}
+
+{#</button>#}
+
+
+{# Display a form #}
+{#<form action="/url/to/submit/" method="post" class="form">#}
+{#  {% csrf_token %}#}
+{#  {% bootstrap_form form %}#}
+{#  {% buttons %}#}
+{#    <button type="submit" class="btn btn-primary">#}
+{#      {% bootstrap_icon "star" %} Submit#}
+{#    </button>#}
+{#  {% endbuttons %}#}
+{#</form>#}
+
+{# Read the documentation for more information #}
+{# Display farmer form #}
+
+
+{#<form role="form" method="post" class="form">#}
+{#    {% csrf_token %}#}
+{#    {% bootstrap_form form %}#}
+{#    {% buttons %}#}
+{#        <button type="submit" class="btn btn-primary">Submit</button>#}
+{#    {% endbuttons %}#}
+{#</form>#}
