@@ -1,105 +1,48 @@
-{#<header>#}
-{#    #}
-{#</header>#}
+{% load static %}
 <!DOCTYPE html>
-<html>
 {# Make modifiable head elements #}
+<html lang="en">
 <head>
-    <title>{% block title %}Home {% endblock title %}</title>
-    {% block head_favicon %}
-        <link rel="icon" type="image/png"
-              href="{{ STATIC_URL }}images/favicon.ico">
-    {% endblock head_favicon %}
-    {% block head_meta %}
-        {% block head_meta_charset %}
-            <meta http-equiv="Content-Type"
-                  content="text/html; charset=utf-8" />
-        {% endblock head_meta_charset %}
-        {% block head_meta_contentlanguage %}
-            <meta http-equiv="Content-Language" value="en-US" />
-        {% endblock head_meta_contentlanguage %}
-        {% block head_meta_viewport %}
-            <meta name="viewport"
-                  content="width=device-width, initial-scale=1.0">
-        {% endblock head_meta_viewport %}
-    {% endblock head_meta %}
-    {% block head_css %}
-        {% block head_css_site %}
-            <link href="{{ STATIC_URL }}css/bootstrap.min.css"
-                  rel="stylesheet" media="screen">
-            <link href="{{ STATIC_URL }}css/app.css"
-                  rel="stylesheet" media="screen">
-        {% endblock head_css_site %}
-        {% block head_css_section %}{% endblock head_css_section %}
-        {% block head_css_page %}{% endblock head_css_page %}
-    {% endblock head_css %}
+    <meta charset="UTF-8">
+    <title>Hawaiian Soil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+    <link rel="stylesheet" href="{% static "farms/style.css" %}">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+    <script>
+        $('.ui .item').on('click', function() {
+            $('.ui .item').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
 </head>
-<body>
-{# Navigation Menu #}
-<header style="margin: 0 0 1em 0">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+<header>
+    <div class="ui inverted vertical center aligned segment">
+        <div class="ui large inverted pointing menu">
+            <div class="item">
+                <img src="{% static "farms/manoaseal.png" %}">
+            </div>
+            <div class="header item">Hawaiian Soil</div>
+            <a class="item" href="{% url "farms:index" %}">Home</a>
+            <a class="item">Farms</a>
+            <a class="item" href="{% url "farms:about" %}">How to Use</a>
+            {#        <div class="ui text container">#}
+            {#            <h1 class="ui inverted header">#}
+            {#                {{ title }}#}
+            {#            </h1>#}
+            {#        </div>#}
+            <div class="right menu">
+                <div class="item">
+                    <button class="ui primary button">Sign Up</button>
+                </div>
+                <div class="item">
+                    <button class="ui button">Log In</button>
+                </div>
+            </div>
         </div>
-    </nav>
-    {#    <div class="navbar navbar-default navbar-static-top#}
-    {#        {% block nav-style %}{% endblock %}">#}
-    {#        <div class="container p-none">#}
-    {#            <div class="navbar-header">#}
-    {#                <button type="button" class="navbar-toggle"#}
-    {#                        data-toggle="collapse"#}
-    {#                        data-target=".navbar-collapse">#}
-    {#                    <span class="icon-bar"></span>#}
-    {#                    <span class="icon-bar"></span>#}
-    {#                    <span class="icon-bar"></span>#}
-    {#                </button>#}
-    {#                <a class="navbar-brand" href="/">CRM Easy</a>#}
-    {#            </div>#}
-    {#            <div class="collapse navbar-collapse">#}
-    {#                <ul class="nav navbar-nav navbar-right">#}
-    {#                    {% if user.is_authenticated %}#}
-    {#                        <li><a href="">Logout</a></li>#}
-    {#                        <li><a href=""#}
-    {#                               class="p-r-none">Accounts</a></li>#}
-    {#                    {% else %}#}
-    {#                        <li><a href="">Login</a></li>#}
-    {#                        <li><a href="" class="p-r-none">Sign Up</a></li>#}
-    {#                    {% endif %}#}
-    {#                </ul>#}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </div>#}
+    </div>
 </header>
+<body>
 {# The Document Body #}
 <div id="site-wrapper">
     {% block content %}
@@ -108,8 +51,102 @@
 </div>
 {# The Footer #}
 <div class="footer">
-    <div class="container">
-        <p>Copyright University of Hawaii at Manoa</p>
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="four wide column">
+                    <h4 class="ui inverted header">About</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Sitemap</a>
+                        <a href="#" class="item">Contact Us</a>
+                        <a href="#" class="item">Religious Ceremonies</a>
+                        <a href="#" class="item">Gazebo Plans</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">Services</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Banana Pre-Order</a>
+                        <a href="#" class="item">DNA FAQ</a>
+                        <a href="#" class="item">How To Access</a>
+                        <a href="#" class="item">Favorite X-Men</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">Hawaiian Soil</h4>
+                    <p>2018 University of Hawaii at Manoa</p>
+                </div>
+                <div class="four wide column">
+                    <img id="manoaseal" src="{% static "farms/manoaseal.png" %}" style="width: 25%">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
+</html>
+
+{# Navigation Menu #}
+{#<header style="margin: 0 0 1em 0">#}
+{#    <nav class="navbar navbar-expand-lg navbar-light bg-light">#}
+{#        <a class="navbar-brand" href="#">Navbar</a>#}
+{#        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">#}
+{#            <span class="navbar-toggler-icon"></span>#}
+{#        </button>#}
+{##}
+{#        <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
+{#            <ul class="navbar-nav mr-auto">#}
+{#                <li class="nav-item active">#}
+{#                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">Link</a>#}
+{#                </li>#}
+{#                <li class="nav-item dropdown">#}
+{#                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                        Dropdown#}
+{#                    </a>#}
+{#                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+{#                        <a class="dropdown-item" href="#">Action</a>#}
+{#                        <a class="dropdown-item" href="#">Another action</a>#}
+{#                        <div class="dropdown-divider"></div>#}
+{#                        <a class="dropdown-item" href="#">Something else here</a>#}
+{#                    </div>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link disabled" href="#">Disabled</a>#}
+{#                </li>#}
+{#            </ul>#}
+{#            <form class="form-inline my-2 my-lg-0">#}
+{#                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">#}
+{#                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>#}
+{#            </form>#}
+{#        </div>#}
+{#    </nav>#}
+{#    <div class="navbar navbar-default navbar-static-top#}
+{#        {% block nav-style %}{% endblock %}">#}
+{#        <div class="container p-none">#}
+{#            <div class="navbar-header">#}
+{#                <button type="button" class="navbar-toggle"#}
+{#                        data-toggle="collapse"#}
+{#                        data-target=".navbar-collapse">#}
+{#                    <span class="icon-bar"></span>#}
+{#                    <span class="icon-bar"></span>#}
+{#                    <span class="icon-bar"></span>#}
+{#                </button>#}
+{#                <a class="navbar-brand" href="/">CRM Easy</a>#}
+{#            </div>#}
+{#            <div class="collapse navbar-collapse">#}
+{#                <ul class="nav navbar-nav navbar-right">#}
+{#                    {% if user.is_authenticated %}#}
+{#                        <li><a href="">Logout</a></li>#}
+{#                        <li><a href=""#}
+{#                               class="p-r-none">Accounts</a></li>#}
+{#                    {% else %}#}
+{#                        <li><a href="">Login</a></li>#}
+{#                        <li><a href="" class="p-r-none">Sign Up</a></li>#}
+{#                    {% endif %}#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}

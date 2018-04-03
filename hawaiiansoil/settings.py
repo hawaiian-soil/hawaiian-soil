@@ -33,8 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'farms.apps.FarmsConfig',
     'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
+    'django.contrib.auth',          # Core authentication framework and its default models
+    'django.contrib.contenttypes',  # Django content type system
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
