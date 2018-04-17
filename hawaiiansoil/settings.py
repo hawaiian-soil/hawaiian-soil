@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'farms.apps.FarmsConfig',
     'django.contrib.admin',
     'django.contrib.auth',          # Core authentication framework and its default models
     'django.contrib.contenttypes',  # Django content type system
@@ -40,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',   # Bootstrap integration with Django
     'localflavor',  # Django US based model and form entries
+    'farms.apps.FarmsConfig',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +82,13 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+#
+
+LOGIN_REDIRECT_URL = '/farms/'
+
+
+# User model to authenticate off of
 
 AUTH_USER_MODEL = 'farms.Farmer'
 

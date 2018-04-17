@@ -3,17 +3,28 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 from farms.models import Farmer
 
-class FarmerForm(ModelForm):
+
+class SignUpForm(ModelForm):
 
     class Meta:
         model = Farmer
         fields = [
             'username', 'password',
+            'email', 'phone_number',
             # 'first_name', 'last_name',
             # 'email', 'phone_number',
             # 'street_address',
             # 'city', 'state', 'zipcode',
         ]
+
+class LoginForm(ModelForm):
+
+    class Meta:
+        model = Farmer
+        fields = [
+            'username', 'password',
+        ]
+
 # class AlertForm(forms.Form):
 #
 #     validation_text = forms.CharField(

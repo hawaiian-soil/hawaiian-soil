@@ -33,12 +33,21 @@
                 {#            </h1>#}
                 {#        </div>#}
                 <div class="right menu">
-                    <div class="item">
-                        <a class="ui primary button" href="{% url "farms:signup" %}">Sign Up</a>
-                    </div>
-                    <div class="item">
-                        <button class="ui button">Log In</button>
-                    </div>
+                    {% if user.is_authenticated %}
+                        <div class="item">
+                            You are logged in as: {{ user.username }}
+                        </div>
+                        <div class="item">
+                        <a class="ui button" href="{% url "farms:logout" %}">Log Out</a>
+                        </div>
+                    {% else %}
+                        <div class="item">
+                            <a class="ui primary button" href="{% url "farms:signup" %}">Sign Up</a>
+                        </div>
+                        <div class="item">
+                            <a class="ui button" href="{% url "farms:login" %}">Log In</a>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -51,7 +60,7 @@
         {% endblock content %}
     </div>
     {# The Footer #}
-    <div class="footer">
+    <div id="footer-wrapper" class="footer">
         <div class="ui inverted vertical footer segment">
             <div class="ui container">
                 <div class="ui stackable inverted divided equal height stackable grid">
@@ -60,17 +69,15 @@
                         <div class="ui inverted link list">
                             <a href="#" class="item">Sitemap</a>
                             <a href="#" class="item">Contact Us</a>
-                            <a href="#" class="item">Religious Ceremonies</a>
-                            <a href="#" class="item">Gazebo Plans</a>
                         </div>
                     </div>
                     <div class="four wide column">
                         <h4 class="ui inverted header">Services</h4>
                         <div class="ui inverted link list">
-                            <a href="#" class="item">Banana Pre-Order</a>
-                            <a href="#" class="item">DNA FAQ</a>
-                            <a href="#" class="item">How To Access</a>
-                            <a href="#" class="item">Favorite X-Men</a>
+                            {#                            <a href="#" class="item">Banana Pre-Order</a>#}
+                            {#                            <a href="#" class="item">DNA FAQ</a>#}
+                            {#                            <a href="#" class="item">How To Access</a>#}
+                            {#                            <a href="#" class="item">Favorite X-Men</a>#}
                         </div>
                     </div>
                     <div class="four wide column">

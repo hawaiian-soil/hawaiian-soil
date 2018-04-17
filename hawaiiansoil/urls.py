@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import include, path, re_path
 from django.conf.urls import url
 
+
+#admin.autodiscover()
+
 urlpatterns = [
     path('farms/', include('farms.urls', namespace='farms')),
     path('admin/', admin.site.urls),
