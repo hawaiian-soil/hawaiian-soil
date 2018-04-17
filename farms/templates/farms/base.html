@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 {# Make modifiable head elements #}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Hawaiian Soil</title>
@@ -16,74 +16,76 @@
         });
     </script>
 </head>
-<header>
-    <div class="ui inverted vertical center aligned segment">
-        <div class="ui large inverted pointing menu">
-            <div class="item">
-                <img src="{% static "farms/manoaseal.png" %}">
-            </div>
-            <div class="header item">Hawaiian Soil</div>
-            <a class="item" href="{% url "farms:index" %}">Home</a>
-            <a class="item">Farms</a>
-            <a class="item" href="{% url "farms:about" %}">How to Use</a>
-            {#        <div class="ui text container">#}
-            {#            <h1 class="ui inverted header">#}
-            {#                {{ title }}#}
-            {#            </h1>#}
-            {#        </div>#}
-            <div class="right menu">
-                <div class="item">
-                    <button class="ui primary button">Sign Up</button>
-                </div>
-                <div class="item">
-                    <button class="ui button">Log In</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<body>
-{# The Document Body #}
 <div id="site-wrapper">
-    {% block content %}
-        if you see this, something is wrong!
-    {% endblock content %}
-</div>
-{# The Footer #}
-<div class="footer">
-    <div class="ui inverted vertical footer segment">
-        <div class="ui container">
-            <div class="ui stackable inverted divided equal height stackable grid">
-                <div class="four wide column">
-                    <h4 class="ui inverted header">About</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">Sitemap</a>
-                        <a href="#" class="item">Contact Us</a>
-                        <a href="#" class="item">Religious Ceremonies</a>
-                        <a href="#" class="item">Gazebo Plans</a>
+    <header>
+        <div class="ui inverted vertical center aligned segment">
+            <div class="ui large inverted pointing menu">
+                <div class="item">
+                    <img src="{% static "farms/manoaseal.png" %}">
+                </div>
+                <div class="header item">Hawaiian Soil</div>
+                <a class="item" href="{% url "farms:index" %}">Home</a>
+                <a class="item">Farms</a>
+                <a class="item" href="{% url "farms:about" %}">How to Use</a>
+                {#        <div class="ui text container">#}
+                {#            <h1 class="ui inverted header">#}
+                {#                {{ title }}#}
+                {#            </h1>#}
+                {#        </div>#}
+                <div class="right menu">
+                    <div class="item">
+                        <a class="ui primary button" href="{% url "farms:signup" %}">Sign Up</a>
+                    </div>
+                    <div class="item">
+                        <button class="ui button">Log In</button>
                     </div>
                 </div>
-                <div class="four wide column">
-                    <h4 class="ui inverted header">Services</h4>
-                    <div class="ui inverted link list">
-                        <a href="#" class="item">Banana Pre-Order</a>
-                        <a href="#" class="item">DNA FAQ</a>
-                        <a href="#" class="item">How To Access</a>
-                        <a href="#" class="item">Favorite X-Men</a>
+            </div>
+        </div>
+    </header>
+    <body>
+    {# The Document Body #}
+    <div id="body-wrapper">
+        {% block content %}
+            if you see this, something is wrong!
+        {% endblock content %}
+    </div>
+    {# The Footer #}
+    <div class="footer">
+        <div class="ui inverted vertical footer segment">
+            <div class="ui container">
+                <div class="ui stackable inverted divided equal height stackable grid">
+                    <div class="four wide column">
+                        <h4 class="ui inverted header">About</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">Sitemap</a>
+                            <a href="#" class="item">Contact Us</a>
+                            <a href="#" class="item">Religious Ceremonies</a>
+                            <a href="#" class="item">Gazebo Plans</a>
+                        </div>
                     </div>
-                </div>
-                <div class="four wide column">
-                    <h4 class="ui inverted header">Hawaiian Soil</h4>
-                    <p>2018 University of Hawaii at Manoa</p>
-                </div>
-                <div class="four wide column">
-                    <img id="manoaseal" src="{% static "farms/manoaseal.png" %}" style="width: 25%">
+                    <div class="four wide column">
+                        <h4 class="ui inverted header">Services</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">Banana Pre-Order</a>
+                            <a href="#" class="item">DNA FAQ</a>
+                            <a href="#" class="item">How To Access</a>
+                            <a href="#" class="item">Favorite X-Men</a>
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <h4 class="ui inverted header">Hawaiian Soil</h4>
+                        <p>2018 University of Hawaii at Manoa</p>
+                    </div>
+                    <div class="four wide column">
+                        <img id="manoaseal" src="{% static "farms/manoaseal.png" %}" style="width: 25%">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    </body>
 </div>
-</body>
 </html>
 
 {# Navigation Menu #}

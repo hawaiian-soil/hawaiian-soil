@@ -1,0 +1,23 @@
+{% extends 'farms/base.html' %}
+{% block content %}
+
+    {# Load Bootstap Package #}
+    {% load bootstrap4 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+
+    <div class="ui text container segment" style="padding: 2em;">
+        <div class="ui centered huge dividing header">
+            Sign Up
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="card-footer text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Update Information</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

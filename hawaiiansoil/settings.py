@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap4',
+    'bootstrap4',   # Bootstrap integration with Django
+    'localflavor',  # Django US based model and form entries
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,8 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'farms.Farmer'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -107,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Pacific/Honolulu'
 
 USE_I18N = True
 

@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
-from farms.forms import SignUpForm
+from farms.forms import FarmerForm
 
 
 def index(request):
@@ -42,31 +42,27 @@ def about(request):
     }
     return render(request, template_path, context)
 
-
-def login(request):
-    template_path = 'registration/login.html'
-    context = {
-        'title': "Hawaiian Soil",
-        'crops': ['Potatoes', 'Tomatoes', 'Spinach'],
-    }
-    return render(request, template_path, context)
+#
+# def login(request):
+#     template_path = 'farms/login.html'
+#     context = {
+#         'title': "Hawaiian Soil",
+#         'crops': ['Potatoes', 'Tomatoes', 'Spinach'],
+#     }
+#     return render(request, template_path, context)
 
 
 def signup(request):
-    template_path = 'registration/signup.html'
+    template_path = 'farms/signup.html'
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = FarmerForm(request.POST)
         if form.is_valid():
             user = form.save()
             user.refresh_from_db()  # load the profile instance created by the signal
-            user.profile.birth_date = form.cleaned_data.get('birth_date')
-            user.save()
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=user.username, password=raw_password)
             login(request, user)
-            return redirect('home')
+            return redirect('..')
     else:
-        form = SignUpForm()
+        form = FarmerForm()
     context = {
         'title': "Hawaiian Soil",
         'crops': ['Potatoes', 'Tomatoes', 'Spinach'],

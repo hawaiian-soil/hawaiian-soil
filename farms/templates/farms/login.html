@@ -1,0 +1,20 @@
+{% extends 'farms/base.html' %}
+{% block content %}
+
+    {# Load Bootstap Package #}
+    {% load bootstrap4 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+
+    <div id=login class="ui text container segment" style="padding-top: 3em">
+        <div class="ui huge dividing centered header">
+            Login
+        </div>
+        <form>
+            {% csrf_token %}
+
+        </form>
+    </div>
+{% endblock %}
