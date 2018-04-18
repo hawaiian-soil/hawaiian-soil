@@ -8,13 +8,37 @@
     {% bootstrap_css %}
     {% bootstrap_javascript jquery='full' %}
 
+
     <div class="ui text container segment" style="padding: 2em;">
         <div class="ui centered huge dividing header">
             Sign Up
         </div>
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            <div class="card border-success mb-3">
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputUsername">Username</label>
+                            <input name="{{ form.name.username }}" type="text" class="form-control" id="inputUsername">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword">Password</label>
+                            <input name="{{ form.name.password }}" type="password" class="form-control" id="inputPassword">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail">Email</label>
+                            <input name="{{ form.name.email }}" type="email" class="form-control" id="inputEmail">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPhoneNumber">Phone Number</label>
+                            <input name="{{ form.name.phone_number }}" type="text" class="form-control" id="inputPhoneNumber">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="card-footer text-center">
                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
             </div>

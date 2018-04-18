@@ -1,3 +1,10 @@
+#viewDiv {
+    position: fixed;
+    height: 100%;
+    width: 49.5%; /* 0.5% less than the percentage of the screen it takes up */
+    overflow: hidden;
+}
+
 #site-wrapper {
     background: url('mountain.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -9,13 +16,13 @@
 
 #footer-wrapper {
     width: 100%;
-    /*background-image: none;*/
-    /*background-repeat: repeat;*/
-    /*background-attachment: scroll;*/
-    /*background-position: 0% 0%;*/
-    /*position: fixed;*/
-    /*bottom: 0pt;*/
-    /*left: 0pt;*/
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+    left: 0pt;
 }
 
 #manoaseal {
@@ -76,7 +83,7 @@
 }
 
 .footer.segment {
-    padding: 5em 0em;
+    padding: 2em;
 }
 
 .secondary.pointing.menu .toc.item {
@@ -112,12 +119,12 @@
 }
 
 #login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
 }
 
 

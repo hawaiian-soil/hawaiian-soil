@@ -55,6 +55,7 @@ def signup(request):
         # Check if the form is valid with the model constraints
         if form.is_valid():
             user = form.save()      # Save the data from the signup
+            print(user)
             user.refresh_from_db()  # load the profile instance created by the signal
             login(request, user)    # Login the user to their new account
             return redirect('..')   # Redirect the user to the home page
