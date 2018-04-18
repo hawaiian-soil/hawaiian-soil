@@ -1,9 +1,8 @@
 from django import forms
-from django.forms import ModelForm
 from localflavor.us.forms import USStateSelect
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
-from farms.models import Farmer
+from farms.models import Farmer, Farm
 
 
 class SignUpForm():
@@ -16,7 +15,7 @@ class SignUpForm():
         ]
 
 
-class LoginForm(ModelForm):
+class LoginForm(forms.ModelForm):
 
 
     class Meta:
@@ -26,7 +25,7 @@ class LoginForm(ModelForm):
         ]
 
 
-class ProfileForm(ModelForm):
+class ProfileForm(forms.ModelForm):
 
     state = forms.CharField(widget=USStateSelect(), initial='HI')
 
@@ -39,6 +38,20 @@ class ProfileForm(ModelForm):
             'city', 'state', 'zipcode',
         ]
 
+
+class FarmForm(forms.ModelForm):
+
+    state = forms.CharField(widget=USStateSelect(), initial='HI')
+
+    class Meta:
+        model = Farm
+        fields = [
+            'farm_name',
+            'street_address',
+            'city', 'state', 'zipcode',
+            'main_crop', 'acres',
+            'owned_since', 'ownership_type',
+        ]
 
 
 

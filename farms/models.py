@@ -8,6 +8,15 @@ from django.dispatch import receiver
 
 from localflavor.us.models import USStateField, USZipCodeField
 
+import datetime
+
+
+YEAR_CHOICES = []
+for r in range(1980, (datetime.datetime.now().year+1)):
+    YEAR_CHOICES.append((r,r))
+
+
+
 
 # Create your models here.
 class Farmer(AbstractUser):
@@ -52,5 +61,22 @@ def update_user_profile(sender, instance, created, **kwargs):
     if created:
         Farmer.objects.create(user=instance)
     instance.profile.save()
+
+
+class Farm(models.Model):
+
+    def __str__(self):
+        return self.farm_name
+
+    username = models.ForeignKey(Farmer, on_delete=models.CASCADE)
+    farm_name = models.CharField(max_length=50)
+    street_address =  models.CharField(max_length=50, blank=True)
+    city = models.CharField(max_length=30, blank=True)
+    state = USStateField(blank=True)
+    zipcode = USZipCodeField(blank=True)
+    owned_since = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year, blank=True)
+    main_crop = models.CharField(max_length=50, blank=True)
+    ownership_type = models.CharField(max_length=50, blank=True)
+    acres = models.IntegerField(blank=True)
 
 

@@ -3,7 +3,7 @@ from django.template import loader
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from farms.forms import SignUpForm, ProfileForm
+from farms.forms import SignUpForm, ProfileForm, FarmForm
 
 
 base_context = {
@@ -26,6 +26,30 @@ def home(request):
     template_path = 'farms/home.html'
     context = base_context
     return render(request, template_path, context)
+
+
+@login_required
+def farm(request):
+    template_path = 'farms/farm.html'
+    # Upon submission / a POST request from the SignUpForm
+    if request.method == 'POST':
+        form = FarmForm(request.POST)
+
+        # Check if the form is valid with the model constraints
+        if form.is_valid():
+            user = form.save()  # Save the data from the signup
+            user.refresh_from_db()  # load the profile instance created by the signal
+            user.save()
+
+            return redirect('..')  # Redirect the user to the home page
+    # Request was probably a GET request and the user wants to see the form
+    else:
+        form = FarmForm()
+    # Set context to the base
+    context = base_context
+    context['form'] = form
+    return render(request, template_path, context)
+
 
 
 @login_required
