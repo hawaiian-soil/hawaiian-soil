@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+
     <title>Hawaiian Soil</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
@@ -30,14 +31,15 @@
                 <div class="item">
                     <img src="{% static "farms/manoaseal.png" %}">
                 </div>
-                {# Left Menu #}
-                <div class="header item">Hawaiian Soil</div>
-                <a class="item" href="{% url "farms:index" %}">Home</a>
+                {# Left side of Menu with different page listings #}
+                <a class="header item" href="{% url "farms:index" %}">Hawaiian Soil</a>
+                <a class="item" href="{% url "farms:home" %}">Home</a>
                 <a class="item">Farms</a>
                 <a class="item" href="{% url "farms:profile" %}">Profile</a>
                 <a class="item" href="{% url "farms:about" %}">How to Use</a>
-                {# Right Menu #}
+                {# Right Side of Menu with login info #}
                 <div class="right menu">
+                    {# If the user is logged in, display their username and a logout button #}
                     {% if user.is_authenticated %}
                         <div class="item">
                             You are logged in as: {{ user.username }}
@@ -45,6 +47,7 @@
                         <div class="item">
                             <a class="ui button" href="{% url "farms:logout" %}">Log Out</a>
                         </div>
+                        {# If the user is not logged in, display the signup and login buttons #}
                     {% else %}
                         <div class="item">
                             <a class="ui primary button" href="{% url "farms:signup" %}">Sign Up</a>
@@ -95,6 +98,5 @@
             </div>
         </div>
     </footer>
-
 </div>
 </html>

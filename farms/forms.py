@@ -1,29 +1,46 @@
+from django import forms
 from django.forms import ModelForm
+from localflavor.us.forms import USStateSelect
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 from farms.models import Farmer
 
 
-class SignUpForm(ModelForm):
+class SignUpForm():
 
     class Meta:
         model = Farmer
         fields = [
             'username', 'password',
             'email', 'phone_number',
-            # 'first_name', 'last_name',
-            # 'email', 'phone_number',
-            # 'street_address',
-            # 'city', 'state', 'zipcode',
         ]
 
+
 class LoginForm(ModelForm):
+
 
     class Meta:
         model = Farmer
         fields = [
             'username', 'password',
         ]
+
+
+class ProfileForm(ModelForm):
+
+    state = forms.CharField(widget=USStateSelect(), initial='HI')
+
+    class Meta:
+        model = Farmer
+        fields = [
+            'first_name', 'last_name',
+            'email', 'phone_number',
+            'street_address',
+            'city', 'state', 'zipcode',
+        ]
+
+
+
 
 # class AlertForm(forms.Form):
 #

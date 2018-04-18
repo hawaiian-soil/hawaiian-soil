@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',   # Bootstrap integration with Django
     'localflavor',  # Django US based model and form entries
+    'widget_tweaks',    # Django widget tweaks
     'farms.apps.FarmsConfig',
 ]
 
@@ -83,9 +84,13 @@ DATABASES = {
     }
 }
 
-#
+# Login Settings
 
-LOGIN_REDIRECT_URL = '/farms/'
+LOGIN_URL = '/farms/accounts/login'
+
+LOGIN_REDIRECT_URL = '/farms/home'
+
+LOGOUT_REDIRECT_URL = '/farms/'
 
 
 # User model to authenticate off of

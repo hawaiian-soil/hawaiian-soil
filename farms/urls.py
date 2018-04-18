@@ -7,11 +7,13 @@ app_name = 'farms'
 urlpatterns = [
     # Hawaiian Soil Urls
     path('', views.index, name='index'),
+    path('home/', views.home, name='home'),
+    path('profile/', views.profile, name='profile'),
     path('about/', views.about, name='about'),
     path('form/', views.profile_form, name='profile_form'),
-    path('profile/', views.profile, name='profile'),
+
 
     # Registration Urls
-    path('signup/', views.signup, name='signup'),
+    path('accounts/signup/', views.signup, name='signup'),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

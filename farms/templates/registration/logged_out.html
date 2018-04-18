@@ -1,0 +1,12 @@
+{% extends 'farms/base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+    {# Load Bootstap Package #}
+    {% load bootstrap4 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+    
+{% endblock %}

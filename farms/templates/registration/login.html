@@ -1,4 +1,5 @@
 {% extends 'farms/base.html' %}
+{% load widget_tweaks %}
 {% block content %}
 
     {# Load Bootstap Package #}
@@ -14,9 +15,22 @@
         </div>
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
-            <div class="card-footer text-center">
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            <div class="card border-success mb-3">
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Username</label>
+                            {% render_field form.username class="form-control" placeholder="username" %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Password</label>
+                            {% render_field form.password class="form-control" placeholder="password" %}
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                </div>
             </div>
         </form>
     </div>

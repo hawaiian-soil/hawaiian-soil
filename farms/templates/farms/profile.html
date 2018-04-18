@@ -1,4 +1,5 @@
 {% extends 'farms/base.html' %}
+{% load widget_tweaks %}
 {% block content %}
 
     {# Load Bootstap Package #}
@@ -19,49 +20,48 @@
                 <div class="card-body">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputFirstName">First Name</label>
-                            <input type="text" class="form-control" id="inputFirstName" placeholder="John">
+                            <label>First Name</label>
+                            {% render_field form.first_name class="form-control" placeholder="John" %}
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputLastName">Last Name</label>
-                            <input type="text" class="form-control" id="inputLastName" placeholder="Smith">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Phone Number</label>
-                            <input type="tel" class="form-control" id="inputPassword4" placeholder="(808) 123-0054">
+                            <label>Last Name</label>
+                            {% render_field form.last_name class="form-control" placeholder="Smith" %}
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputAddress">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            <label>Email</label>
+                            {% render_field form.email class="form-control" placeholder="example@gmail.com" %}
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputAddress2">Address 2</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            <label>Phone Number</label>
+                            {% render_field form.phone_number class="form-control" placeholder="+123456789" %}
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Address</label>
+                            {% render_field form.street_address class="form-control" placeholder="1234 Example Street Apt 101" %}
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputCity">City</label>
-                            <input type="text" class="form-control" id="inputCity" placeholder="Honolulu">
+                            <label>City</label>
+                            {% render_field form.city class="form-control" placeholder="City" %}
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputState">State</label>
-                            <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
+                            <label>State</label>
+                            <select id="{{ form.state.id }}" class="form-control">
+                                <option>
+                                    {% for state in form.state %}
+                                        {{ state }}
+                                    {% endfor %}
+                                </option>
                             </select>
                         </div>
                         <div class="form-group col-md-2">
-                            <label for="inputZip">Zip</label>
-                            <input type="text" class="form-control" id="inputZip">
+                            <label>Zipcode</label>
+                            {% render_field form.zipcode class="form-control" placeholder="96419" %}
                         </div>
                     </div>
                 </div>
