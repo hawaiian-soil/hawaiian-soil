@@ -5,6 +5,9 @@ from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 from farms.forms import SignUpForm, LoginForm
 
+base_context = {
+    'title': 'Hawaiian Soil',
+}
 
 def index(request):
     template_path = 'farms/index.html'
@@ -31,7 +34,6 @@ def profile_form(request):
         'crops': ['Potatoes', 'Tomatoes', 'Spinach'],
     }
     return render(request, template_path, context)
-    # return HttpResponse(template.render({}, request))
 
 
 def about(request):
@@ -56,13 +58,12 @@ def signup(request):
             user.refresh_from_db()  # load the profile instance created by the signal
             login(request, user)    # Login the user to their new account
             return redirect('..')   # Redirect the user to the home page
+    # Request was probably a GET request and the user wants to see the form
     else:
         form = SignUpForm()
-    context = {
-        'title': "Hawaiian Soil",
-        'crops': ['Potatoes', 'Tomatoes', 'Spinach'],
-        'form': form,
-    }
+    # Set context to the base
+    context = base_context
+    context['form'] = form
     return render(request, template_path, context)
 
 
