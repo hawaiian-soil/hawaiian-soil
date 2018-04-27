@@ -14,10 +14,7 @@ base_context = {
 
 def index(request):
     template_path = 'farms/index.html'
-    context = {
-        'title': "Hawaiian Soil",
-        'crops': ['Potatoes', 'Tomatoes', 'Spinach'],
-    }
+    context = base_context
     return render(request, template_path, context)
 
 
@@ -31,17 +28,20 @@ def home(request):
 @login_required
 def farm(request):
     template_path = 'farms/farm.html'
-    # Upon submission / a POST request from the SignUpForm
+    # Upon submission / a POST request from the Farm form
     if request.method == 'POST':
-        form = FarmForm(request.POST)
+        form = FarmForm(data=request.POST)
 
         # Check if the form is valid with the model constraints
+        print("Form is valid?: " + str(form.is_valid()))
         if form.is_valid():
-            user = form.save()  # Save the data from the signup
-            user.refresh_from_db()  # load the profile instance created by the signal
-            user.save()
-
-            return redirect('..')  # Redirect the user to the home page
+            farm = form.save(commit=False)  # Save the data from the signup
+            if farm.username is None:
+                farm.username = request.user.get_username()
+                print("Added username to " + farm.farm_name)
+            farm.refresh_from_db()  # load the profile instance created by the signal
+            farm.save()
+            return redirect('/')  # Redirect the user to the home page
     # Request was probably a GET request and the user wants to see the form
     else:
         form = FarmForm()
@@ -57,7 +57,7 @@ def profile(request):
     template_path = 'farms/profile.html'
     # Upon submission / a POST request from the SignUpForm
     if request.method == 'POST':
-        form = ProfileForm(request.POST)
+        form = ProfileForm(data=request.POST, instance=request.user)
 
         # Check if the form is valid with the model constraints
         if form.is_valid():
@@ -65,7 +65,8 @@ def profile(request):
             user.refresh_from_db()  # load the profile instance created by the signal
             user.save()
 
-            return redirect('..')  # Redirect the user to the home page
+            return redirect('/')  # Redirect the user to the home page
+        print(form.is_valid())
     # Request was probably a GET request and the user wants to see the form
     else:
         form = ProfileForm()
@@ -74,14 +75,6 @@ def profile(request):
     context['form'] = form
     return render(request, template_path, context)
 
-
-def profile_form(request):
-    template_path = 'farms/profile_form.html'
-    context = {
-        'title': "Hawaiian Soil",
-        'crops': ['Potatoes', 'Tomatoes', 'Spinach'],
-    }
-    return render(request, template_path, context)
 
 
 def about(request):
@@ -104,8 +97,11 @@ def signup(request):
         if form.is_valid():
             user = form.save()      # Save the data from the signup
             user.refresh_from_db()  # load the profile instance created by the signal
+            user.save()
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=user.username, password=raw_password)
             login(request, user)    # Login the user to their new account
-            return redirect('..')   # Redirect the user to the home page
+            return redirect('/')   # Redirect the user to the home page
     # Request was probably a GET request and the user wants to see the form
     else:
         form = SignUpForm()

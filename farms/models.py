@@ -68,7 +68,7 @@ class Farm(models.Model):
     def __str__(self):
         return self.farm_name
 
-    username = models.ForeignKey(Farmer, on_delete=models.CASCADE)
+    username = models.ForeignKey(Farmer, to_field='username', on_delete=models.CASCADE)
     farm_name = models.CharField(max_length=50)
     street_address =  models.CharField(max_length=50, blank=True)
     city = models.CharField(max_length=30, blank=True)

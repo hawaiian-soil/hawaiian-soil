@@ -1,4 +1,5 @@
 {% extends 'farms/base.html' %}
+{% load widget_tweaks %}
 {% block content %}
 
     {# Load Bootstap Package #}
@@ -15,26 +16,25 @@
         </div>
         <form method="post">
             {% csrf_token %}
+{#            {{ form.errors }}#}
             <div class="card border-success mb-3">
                 <div class="card-body">
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputUsername">Username</label>
-                            <input name="{{ form.name.username }}" type="text" class="form-control" id="inputUsername">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword">Password</label>
-                            <input name="{{ form.name.password }}" type="password" class="form-control" id="inputPassword">
+                        <div class="form-group col-md-12">
+                            <label>Username</label>
+                            {% render_field form.username class="form-control" placeholder="username" %}
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail">Email</label>
-                            <input name="{{ form.name.email }}" type="email" class="form-control" id="inputEmail">
+                        <div class="form-group col-md-12">
+                            <label>Password</label>
+                            {% render_field form.password1 class="form-control" placeholder="password" %}
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPhoneNumber">Phone Number</label>
-                            <input name="{{ form.name.phone_number }}" type="text" class="form-control" id="inputPhoneNumber">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Password Confirmation</label>
+                            {% render_field form.password2 class="form-control" placeholder="password" %}
                         </div>
                     </div>
                 </div>

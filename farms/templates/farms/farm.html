@@ -13,11 +13,11 @@
         <div class="ui centered huge dividing header">
             Farm
         </div>
-        <form>
+        <form method="post">
             {% csrf_token %}
             <div class="card border-success mb-3">
-                {#                <h3 class="card-header text-center ">Basic Information</h3>#}
                 <div class="card-body">
+                    {{ form.errors }}
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label>Farm Name</label>
@@ -37,13 +37,8 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label>State</label>
-                            <select id="{{ form.state.id }}" class="form-control">
-                                <option>
-                                    {% for state in form.state %}
-                                        {{ state }}
-                                    {% endfor %}
-                                </option>
-                            </select>
+                            {% render_field form.state class="form-control" placeholder="State" %}
+
                         </div>
                         <div class="form-group col-md-2">
                             <label>Zipcode</label>
@@ -72,15 +67,6 @@
                     </div>
                 </div>
             </div>
-            {#            <div class="card border-success mb-3">#}
-            {#                <h3 class="card-header text-center ">Farmer Information</h3>#}
-            {#                <div class="card-body">#}
-            {##}
-            {#                    <div class="form-row">#}
-            {##}
-            {#                    </div>#}
-            {#                </div>#}
-            {#            </div>#}
             <div class="card-footer text-center">
                 <button type="submit" class="btn btn-primary btn-lg">Update Information</button>
             </div>

@@ -1,27 +1,19 @@
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
 from localflavor.us.forms import USStateSelect
-from django.core.exceptions import ValidationError
-from django.utils.translation import ugettext_lazy as _
+# from django.core.exceptions import ValidationError
+# from django.utils.translation import ugettext_lazy as _
 from farms.models import Farmer, Farm
 
 
-class SignUpForm():
+class SignUpForm(UserCreationForm):
 
     class Meta:
         model = Farmer
         fields = [
-            'username', 'password',
-            'email', 'phone_number',
-        ]
-
-
-class LoginForm(forms.ModelForm):
-
-
-    class Meta:
-        model = Farmer
-        fields = [
-            'username', 'password',
+            'username',
+            'password1',
+            'password2',
         ]
 
 

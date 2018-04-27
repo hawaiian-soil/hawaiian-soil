@@ -86,11 +86,11 @@ DATABASES = {
 
 # Login Settings
 
-LOGIN_URL = '/farms/accounts/login'
+LOGIN_URL = '/accounts/login'
 
-LOGIN_REDIRECT_URL = '/farms/home'
+LOGIN_REDIRECT_URL = '/home'
 
-LOGOUT_REDIRECT_URL = '/farms/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 # User model to authenticate off of

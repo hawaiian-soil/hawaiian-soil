@@ -21,6 +21,6 @@ from django.conf.urls import url
 #admin.autodiscover()
 
 urlpatterns = [
-    path('farms/', include('farms.urls', namespace='farms')),
+    path('', include('farms.urls', namespace='farms')),
     path('admin/', admin.site.urls),
 ]

@@ -11,7 +11,7 @@ urlpatterns = [
     path('farm/', views.farm, name='farm'),
     path('profile/', views.profile, name='profile'),
     path('about/', views.about, name='about'),
-    #path('form/', views.profile_form, name='profile_form'),
+    # path('form/', views.profile_form, name='profile_form'),
 
 
     # Registration Urls
