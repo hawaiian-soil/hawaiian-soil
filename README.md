@@ -3,7 +3,7 @@ Web Application for Farmer Data
 
 # Installation
 
-# Windows Users
+## Windows Users
 
 1. Change into the top level directory of the Git repository
 
@@ -29,9 +29,13 @@ Web Application for Farmer Data
 
 2. Activate Virtual Environment
 
-`python -m virtualenv <name-of-virutalenv>`
+`<name-of-virtualenv>\Scripts\activate`
 
-1. Activate the Django Server
+Upon completion of the above step, you should now see the name of the virtual environment as
+
+`(<name-of-virtualenv>) <path-to-project>`
+
+3. Activate the Django Server
 `python manage.py runserver`
 
 
